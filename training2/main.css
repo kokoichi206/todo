@@ -1,0 +1,134 @@
+body {
+    max-width: 800px;
+}
+
+main {
+    float: left;
+    width: 50%;
+    max-width: 300px;
+    margin: 30px 30px;
+    /* width: 300px; */
+    height: 600px;
+    /* background-color: #333; */
+}
+
+main header {
+    /* width: 296px; */
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    line-height: 50px;
+    background-color: #555;
+    border: 2px solid #333;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+}
+main .chat {
+    /* width: 240px; */
+    width: 100%;
+    /* margin: 30px; */
+    /* padding-top: 30px; */
+    height: 100%;
+    border: 2px solid #333;
+    border-radius: 10px;
+    /* background-color: #be02fc; */
+}
+
+
+main ul {
+    font-size: 17px;
+    padding: 10px;
+    list-style: none;
+}
+main ul li {
+    width: 90%;
+    border: 1px solid #555;
+    border-radius: 8px;
+    text-decoration: none;
+}
+main ul li.cpu {
+    margin-left: 25px;
+}
+main ul li.cpu {
+    padding: 3px;
+    margin-left: 25px;
+    position: relative;
+}
+main ul li.cpu::before {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    background-color: #444;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 10px;
+    left: -30px;
+    transform: translateY(-50%);
+}
+
+main ul li.me {
+    padding: 3px;
+    margin-right: 25px;
+    position: relative;
+}
+main ul li.me::after {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    background-color: #444;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 10px;
+    right: -30px;
+    transform: translateY(-50%);
+}
+
+
+main ul li + li {
+    margin-top: 3px;
+}
+
+.inp {
+    text-align: bottom;
+    margin: 3px;
+    position: relative;
+}
+main .btn {
+    width: 15%;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+}
+main textarea {
+    width: 80%;
+    font-size: 15px;
+    position: absolute;
+    top: 3px;
+}
+
+
+
+.output {
+    display: block;
+    float: right;
+    width: 50%;
+    height: 700px;
+    margin-top: 30px;
+    background-color: aqua;
+}
+.output .head {
+    background-color: #555;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #555;
+    border: 2px solid #333;
+    border-radius: 5px;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 20px;
+    box-sizing: border-box;
+}

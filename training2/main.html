@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="doctor.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+
+
+    <div class="container">
+        <main>
+            <header>
+                予定を入れてみよう
+            </header>
+            <div class="chat">
+                <ul id="oyaList">
+                    <li class="cpu">
+                        <!-- <ul>
+                            いかがいたしましょう？
+                            <li>1. 予定を追加</li>
+                            <li>2. 予定を確認</li>
+                            <li>3. 予定を削除</li>
+                        </ul> -->
+                        いかがいたしましょう？<br> 1. 予定を追加<br> 2. 予定を確認<br> 3. 予定を削除
+                    </li>
+                </ul>
+            </div>
+
+            <div class="inp">
+                <!-- <input type="text"> -->
+                <textarea name="" id="myMessage" cols="2" rows="2" class="input"></textarea>
+                <button class="btn" onclick="sendMessage()">送信</button>
+            </div>
+        </main>
+
+        <div class="output">
+            <div class="head">予定一覧</div>
+            <div class="result"></div>
+        </div>
+    </div><!-- .container -->
+    
+
+    <script src="js/misc.js"></script>
+    <script src="js/robot.js"></script>
+    <script src="js/person.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
