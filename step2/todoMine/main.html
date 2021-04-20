@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- <font id='exact' class="time"></font><br>
+    <font id='time' class="hoo"></font> -->
+    <input id="date" type="date" />
+    <input type="time" name="" id="time">
+    <input type="text" name="" id="content">
+
+    <button id="submit" onclick="submitData()">submit</button><br>
+
+    <div id="result"></div>
+
+
+
+    <script src="js/misc.js"></script>
+    
+    <script>
+        let now = new Date();
+
+        // const content   = document.getElementById('content');
+        // const eTimer    = document.getElementById('exact');
+        const time      = document.getElementById('time');
+        const date      = document.getElementById('date');
+
+        const result    = document.getElementById('result');
+        const btn       = document.getElementById('submit');
+
+        // timer.textContent = now.toString();
+        // timer.textContent += now.getDate();
+        function submitData(){
+            console.log(date.value);
+            // if ( date.value == null ) console.log('yabai')
+            // const readDate = ( date.value !== 'undefined')? date.value : getToday();
+            const readDate = ( date.value != undefined )? date.value: getToday();
+            const readTime = ( time.value != undefined )? time.value: '0-0-0';
+            // result.textContent = readDate + content.value;
+            result.innerHTML += readDate + '&nbsp;&nbsp;' + content.value + '<br>';
+            // console.log(getToday());
+        }
+    </script>
+</body>
+</html>
