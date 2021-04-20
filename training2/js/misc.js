@@ -1,4 +1,4 @@
-const oyalist           = document.getElementById('oyaList');
+const oyalist = document.getElementById('oyaList');
 
 // なんだっけこれ。
 // innerHTMLとして読み込みたい欲求
@@ -16,10 +16,24 @@ function ht_str( str )
 }
 
 // メインのチャットの ul にリストを追加する
+// function createListElement( message, person ) {
+//     let new_element = document.createElement('li');
+//     new_element.className = ( person === 'cpu' )? 'cpu': 'me';
+//     new_element.innerHTML = ht_str(message);
+//     oyalist.appendChild(new_element);
+// }
 function createListElement( message, person ) {
     let new_element = document.createElement('li');
-    new_element.className = ( person === 'cpu' )? 'cpu': 'me';
-    new_element.innerHTML = ht_str(message);
+    new_element.className = person
+    let p_tag       = document.createElement('p');
+    p_tag.innerHTML     = person + getToday() + '/' + getTime();
+    new_element.appendChild(p_tag);
+
+    let div_tag =   document.createElement('div');
+    // new_element.className = ( person === 'cpu' )? 'cpu': 'me';
+    div_tag.innerHTML = ht_str(message);
+    new_element.appendChild(div_tag);
+
     oyalist.appendChild(new_element);
 }
 
