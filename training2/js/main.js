@@ -4,10 +4,12 @@ let status  = 2;
 
 let allMessages = [];
 
-let mySchedule = [];
+// let mySchedule = [];
+let mySchedule = ['走る', []];
 
 
 function sendMessage() {
     sendMyMessage();
     sendCPUMessage();
+    scrollToEnd();
 }

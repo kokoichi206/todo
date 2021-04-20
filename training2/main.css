@@ -24,7 +24,7 @@ main header {
     text-align: center;
     font-size: 20px;
 }
-main .chat {
+main #chatMain {
     /* width: 240px; */
     width: 100%;
     /* margin: 30px; */
@@ -33,6 +33,7 @@ main .chat {
     border: 2px solid #333;
     border-radius: 10px;
     /* background-color: #be02fc; */
+    overflow-y: scroll;
 }
 
 
