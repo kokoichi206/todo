@@ -12,7 +12,7 @@ function sendCPUMessage() {
 
     // 実験用！
     createListElement(DEFAULT_MESSAGE, 'cpu')
-    return
+    return 
 
     switch ( status ) {
         case STATUSES.CPU1st:
@@ -48,7 +48,7 @@ function secondMessage() {
 }
 
 function appendSchedule() {
-    createListElement(INPUT_YOTEI,)
+    createListElement(INPUT_YOTEI, 'cup');
 }
 function checkSchedule() {
 }

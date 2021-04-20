@@ -47,6 +47,7 @@ main ul li div {
     border: 1px solid #555;
     border-radius: 8px;
     text-decoration: none;
+    padding: 3px;
 }
 main ul li.cpu {
     margin-left: 25px;

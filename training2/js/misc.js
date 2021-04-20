@@ -26,7 +26,7 @@ function createListElement( message, person ) {
     let new_element = document.createElement('li');
     new_element.className = person
     let p_tag       = document.createElement('p');
-    p_tag.innerHTML     = person + getToday() + '/' + getTime();
+    p_tag.innerHTML     = person + ': ' + getToday() + '/' + getTime();
     new_element.appendChild(p_tag);
 
     let div_tag =   document.createElement('div');
@@ -56,7 +56,7 @@ function getTime() {
     return hour + ':' + min ;
 }
 
-
+// li 要素が追加された時自動で下までスクロールするようにした
 function scrollToEnd() {
     const messagesArea = document.getElementById('chatMain');
     messagesArea.scrollTop = messagesArea.scrollHeight;
