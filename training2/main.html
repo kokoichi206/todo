@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="doctor.css">
     <link rel="stylesheet" href="main.css">
 </head>
-<body>
+<body onload="init()">
 
 
 
@@ -20,19 +20,13 @@
             </header>
             <div id="chatMain" class="chat">
                 <ul id="oyaList">
-                    <li class="cpu">
+                    <!-- <li class="cpu">
                         <p>cpu: 2020-04-21/10:15</p>
-                        <!-- <ul>
-                            いかがいたしましょう？
-                            <li>1. 予定を追加</li>
-                            <li>2. 予定を確認</li>
-                            <li>3. 予定を削除</li>
-                        </ul> -->
                         <div>
                             いかがいたしましょう？<br> 1. 予定を追加<br> 2. 予定を確認<br> 3. 予定を削除
                         </div>
                         
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             
@@ -46,7 +40,20 @@
 
         <div class="output">
             <div class="head">予定一覧</div>
-            <div class="result"></div>
+            <div class="container">
+                <div class="sortc">
+                    <input type="checkbox" id="hiddencheck" onchange="hiddenDone()">undoneのみ<br>
+                    <input type="checkbox" id="postdate" checked="checked" onchange="changeCheckBox(1)">投稿日時で
+                    <input type="checkbox" id="deadline" onchange="changeCheckBox(2)">期日で
+                    <input type="checkbox" id="reverse">逆順で
+                    <button id="sort" onclick="sortResult()">そーと</button>
+                </div>
+    
+                <div class="result">
+                    <ul id="resultList"></ul>
+                </div>
+            </div>
+
         </div>
     </div><!-- .container -->
     

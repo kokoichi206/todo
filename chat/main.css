@@ -1,11 +1,12 @@
 body {
-    max-width: 800px;
+    max-width: 1000px;
+    padding: auto;
 }
 
 main {
     float: left;
-    width: 50%;
-    max-width: 300px;
+    width: 100%;
+    max-width: 400px;
     margin: 30px 30px;
     /* width: 300px; */
     height: 600px;
@@ -48,6 +49,7 @@ main ul li div {
     border-radius: 8px;
     text-decoration: none;
     padding: 3px;
+    z-index: 1;
 }
 main ul li.cpu {
     margin-left: 25px;
@@ -63,7 +65,7 @@ main ul li.cpu::before {
     display: block;
     border-radius: 50%;
     background-color: #444;
-    background-image: url('linux.png');
+    background-image: url('optim.png');
     background-size: contain;
     width: 25px;
     height: 25px;
@@ -74,26 +76,19 @@ main ul li.cpu::before {
     border: 1px solid #555;
 }
 
-main ul li.me {
-    padding: 3px;
-    margin-right: 25px;
-    position: relative;
-}
-main ul li.me::after {
-    content: "";
-    display: block;
-    border-radius: 50%;
-    background-color: #444;
-    background-image: url('optim.png');
-    background-size: contain;
-    width: 25px;
-    height: 25px;
+main ul li .delete {
     position: absolute;
-    top: 10px;
-    right: -30px;
-    transform: translateY(-50%);
-    border: 1px solid #555;
+    right: 30px;
+    top: -3px;
+    cursor: pointer;
 }
+main ul li .edit {
+    position: absolute;
+    right: 70px;
+    top: -3px;
+    cursor: pointer;
+}
+
 
 main ul li + li {
     margin-top: 3px;
@@ -111,10 +106,13 @@ main ul li.me div {
     margin-left: 20px;
 }
 
+
+.matome {
+    position: relative;
+}
 .inp {
     text-align: bottom;
     margin: 3px;
-    position: relative;
 }
 main .btn {
     width: 15%;
@@ -129,49 +127,10 @@ main textarea {
     top: 3px;
 }
 
-
-
-.output {
-    display: block;
-    float: right;
-    width: 50%;
-    height: 700px;
-    margin-top: 30px;
-    /* background-color: aqua; */
-}
-.output .head {
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
-    background-color: #777;
-    border: 2px solid #333;
-    border-radius: 5px;
-    text-align: left;
-    padding-left: 10px;
-    font-size: 20px;
-    box-sizing: border-box;
+.sortContainer {
+    position: absolute;
+    top: 50px;
 }
 
-.output .container {
-    width: 100%;
-    height: 90%;
-    margin: 10px;
-    border: 1px solid #888;
-    border-radius: 30px;
-    padding: 0;
-    margin: 0;
-}
 
-.output .sortc {
-    margin: 10px 15px;
-}
-
-.output .result {
-    margin: 10px 10px 10px 40px;
-    font-size: 25px;
-}
-
-.result .done {
-    text-decoration: line-through solid #f00;
-}
 

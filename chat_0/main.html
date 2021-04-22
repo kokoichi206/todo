@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="doctor.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+
+
+    <div class="container">
+        <main>
+            <header>
+                ひとりごと
+            </header>
+            <div id="chatMain" class="chat">
+                <ul id="oyaList">
+
+                </ul>
+            </div>
+            
+
+            <div class="matome">
+                <div class="inp">
+                    <!-- <input type="text"> -->
+                    <textarea name="" id="myMessage" cols="2" rows="2" class="input"></textarea>
+                    <button class="btn" onclick="sendMessage()">送信</button>
+                </div>
+    
+                <div class="sortContainer">
+                    <div class="sortc">
+                        <input type="checkbox" id="postdate" checked="checked" onchange="changeCheckBox(1)" hidden>
+                        <input type="checkbox" id="reverse">逆順で
+                        <button id="sort" onclick="sortChats()">そーと</button>
+                    </div>
+        
+                    <div class="result">
+                        <ul id="resultList"></ul>
+                    </div>
+                </div>
+
+
+            </div><!-- .matome -->
+
+        </main>
+
+    </div><!-- .container -->
+
+
+    <script src="js/misc.js"></script>
+    <script src="js/person.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+</html>
