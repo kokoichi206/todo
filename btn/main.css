@@ -1,0 +1,197 @@
+/* 
+.googleBox {
+    width: 100px;
+    height: 70px;
+    margin: 15px;
+    background-color: aquamarine;
+    position: relative;
+} */
+
+.btnd {
+    position: relative;
+    width: 33px;
+    height: 33px;
+}
+/* .googleButton {
+    top: 10px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: none;
+} */
+/* .googleButton:hover {
+    background-color: #888;
+} */
+.google {
+    position: absolute;
+    padding: 7px;
+    margin: 0;
+    top: -2px;
+    left: -2px;
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.google:hover {
+    background-color: #eee;
+    border-radius: 50%;
+}
+/* svg:hover {
+    background-color: #eee;
+} */
+
+.btnGroup button {
+    cursor: pointer;
+}
+
+
+
+
+
+
+.dropdown{
+    display:none;
+    background-color: #fff;
+    z-index: 1;
+}
+
+/* label,
+li{
+    /* display:block;
+    padding:2em;
+    background:gold;
+    border-bottom:#fff 1px solid;
+    font-family:sans-serif;
+    letter-spacing:.05em;
+    font-weight:bold; */
+/* } */ */
+li:hover,
+label:hover{
+    background:orange;
+}
+/* li::before{
+    content:"";
+    display:block;
+    position:absolute;
+    right:5%;
+    width:.5em;
+    height:.5em;
+    border-top:#000 2px solid;
+    border-left:#000 2px solid;
+    transform:rotate(135deg);
+} */
+input[type="checkbox"]{
+  display:none;
+}
+label[for="menu"]{
+    display:block;
+    background: #444;
+}
+/* label[for="menu"]::before{
+  transform:rotate(225deg);
+} */
+/* ここの menu は id じゃなくてクラスにしたらダメ？？ */
+#menu:checked + .dropdown{
+    display:block;
+}
+
+.btnGroup {
+    border: 1px solid #888;
+    margin-top: 10px;
+    width: 110px;
+    height: 40px;
+    text-align: center;
+    padding: 2px;
+}
+.btnGroup li {
+    display: inline-block;
+}
+.btnGroup li button {
+    font-size: 13px;
+    margin: 5px;
+}
+
+
+
+
+
+main {
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 1000px;
+    margin: 50px auto;
+    height: 200vh;
+}
+
+
+
+.modalOpen, .modalClose {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 40px;
+    background-color: blue;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modalClose {
+    margin: 30px auto 0;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% ) scale(0.95);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    min-width: 500px;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    max-width: 90vh;
+    overflow: auto;
+}
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translate( -50%, -50% ) scale(1);
+}
+
+.modal h2 {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.modalContents {
+    line-height: 1.8;
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;;
+    background-color: #000;
+    opacity: 0.7;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+.mask.active {
+    opacity: 0.7;
+    visibility: visible;
+}
+
