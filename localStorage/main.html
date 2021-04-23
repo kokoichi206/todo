@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style media="screen">
+        input, button {
+            padding: 7px;
+            height: 40px;
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <fieldset>
+        <legend>Insert Data</legend>
+        <input type="text" id="inpKey" placeholder="Enter Key...">
+        <input type="text" id="inpValue" placeholder="Enter Value...">
+        <button type="button" id="btnInsert">Insert Data</button>
+    </fieldset>
+    <fieldset>
+        <legend>Local Storage</legend>
+        <div id="IsOutput"></div>
+    </fieldset>
+
+    <script>
+        const inpKey = document.getElementById("inpKey");
+        const inpValue = document.getElementById("inpValue");
+        const btnInsert = document.getElementById("btnInsert");
+        const IsOutput = document.getElementById("IsOutput");
+
+        btnInsert.onclick = function () {
+            const key = inpKey.value;
+            const value = inpValue.value;
+
+            if ( key && value ){
+                localStorage.setItem( key, value );
+                location.reload();
+            }
+        };
+        // console.log('onclick');
+
+        for ( let i=0; i<localStorage.length; i++ ){
+            const key = localStorage.key(i);
+            const value = localStorage.getItem(key);
+
+            IsOutput.innerHTML += `${key}: ${value}<br />`;
+        }
+
+        const allMessages = localStorage;
+        console.log(allMessages);
+
+        // array (allMessages) -> NOTHING (localStorage)
+        // [[1, 'a', 'a'], [2, 'a', 'a'], [3, 'a', 'a']]
+        //          ↓   ↓   ↓   ↓   ↓   ↓
+        // {1: "[1, 'a', 'a']", 2: "[2, 'a', 'a']", 3: "[3, 'a', 'a']"]
+        let tmp = [[1, 'a', 'a'], [2, 'a', 'a'], [3, 'a', 'a']];
+        arrayToObj(tmp);
+        function arrayToObj( array ) {
+            for ( let i=0; i<array.length; i++ ){
+                let uniqId = array[i][0];
+                let message = array[i];
+                localStorage.setItem( uniqId, message );
+            }
+        }
+        // NOTHING (localStorage) -> array (allMessages)
+        // {1: "[1, a, a]", 2: "[2, a, a]", 3: "[3, a, a]"]
+        //          ↓   ↓   ↓   ↓   ↓   ↓
+        // [[1, 'a', 'a'], [2, 'a', 'a'], [3, 'a', 'a']]
+        function objToArray( ) {
+            let tmp = [];
+            for ( let i=0; i<localStorage.length; i++ ){
+                const key = localStorage.key(i);
+                const value = localStorage.getItem(key);
+                tmp.push( getArrayFromString(value) );
+            }
+            return tmp
+        }
+        // id が string になっちゃうのはおけ？
+        function getArrayFromString( string ) {
+            return string.split(",")
+        }
+    </script>
+</body>
+</html>
