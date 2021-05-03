@@ -7,7 +7,6 @@ function sendMyMessage() {
     let message = [countId, chat, unixTime()];
     createListElement(message, 'cpu');
     allMessages.push(message);
-    console.log(allMessages);
 }
 
 

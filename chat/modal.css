@@ -48,13 +48,10 @@
 
 
 
-
-
-
 .dropdown{
     display:none;
     background-color: #fff;
-    z-index: 1;
+    z-index: 10000;
 }
 
 /* label,
@@ -82,8 +79,9 @@ label:hover{
     border-left:#000 2px solid;
     transform:rotate(135deg);
 } */
-input[type="checkbox"]{
-  display:none;
+/* input[type="checkbox"]{ */
+input[id="menu"]{
+   display:none;
 }
 label[for="menu"]{
     display:block;
@@ -114,8 +112,6 @@ label[for="menu"]{
 }
 
 
-
-
 /* 
 main {
     background-color: #eee;
@@ -125,7 +121,6 @@ main {
     margin: 50px auto;
     height: 200vh;
 } */
-
 
 
 .modalOpen, .modalClose {
@@ -154,7 +149,7 @@ main {
     padding: 20px;
     border-radius: 5px;
     min-width: 500px;
-    z-index: 2;
+    z-index: 200000;
     opacity: 0;
     visibility: hidden;
     transition: 0.3s;
@@ -185,7 +180,7 @@ main {
     height: 100%;;
     background-color: #000;
     opacity: 0.7;
-    z-index: 1;
+    z-index: 100000;
     opacity: 0;
     visibility: hidden;
     transition: 0.3s;

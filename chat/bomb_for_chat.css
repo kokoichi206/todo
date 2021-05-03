@@ -1,0 +1,26 @@
+/* body p {
+    display: inline;
+} */
+
+li div.scatDiv {
+    display: inline-block;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+.bomb {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    border: 2px solid #555;
+    background-color: #eee;
+    text-align: center;
+}
+
+/* ul li {
+    margin: 10px;
+    border: 1px solid #555;
+} */
