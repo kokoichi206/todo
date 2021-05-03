@@ -1,0 +1,24 @@
+body p {
+    display: inline;
+
+}
+
+/* .conteiner {
+    position: relative;
+} */
+
+div {
+    display: inline-block;
+    /* _display: inline; */
+    transition: 5s ease;
+}
+
+.bomb {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    border: 2px solid #555;
+    background-color: #eee;
+    text-align: center;
+}
